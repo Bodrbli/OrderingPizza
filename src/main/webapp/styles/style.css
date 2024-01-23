@@ -1,0 +1,45 @@
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: aquamarine;
+    display: flex;
+    align-content: center;
+}
+.modal {
+    margin: auto;
+    padding: 20px;
+    width: 525px;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.tableDiv {
+    margin: auto;
+    width: 525px;
+    overflow: auto;
+    border-radius: 10px;
+}
+.responseTable {
+    margin: auto;
+}
+.cell {
+    margin: auto;
+}
+.requestForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+#appearance {
+    width: 200px;
+    margin: 10px;
+}
+.requestButton {
+    width: 150px;
+    border-radius: 5px;
+    background-color: cornsilk;
+}
