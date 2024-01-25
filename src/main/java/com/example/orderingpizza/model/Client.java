@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Objects;
 
 public class Client {
+    private String id;
     private String name;
     private String phone;
     private String email;
@@ -27,6 +28,10 @@ public class Client {
         String address = String.format("%s %s %s %s", request.getParameter("town"), request.getParameter("street"),
                 request.getParameter("building"), request.getParameter("flat"));
         return address;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
