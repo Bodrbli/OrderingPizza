@@ -8,8 +8,9 @@ public class Pizza {
     private String title;
     private String recipe;
 
-    public Pizza(String title) {
+    public Pizza(String title, String recipe) {
         this.title = title;
+        this.recipe = recipe;
     }
 
     public Pizza(ResultSet result) {
@@ -20,7 +21,6 @@ public class Pizza {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public String getId() {
@@ -37,7 +37,7 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return "Pizza"  + title + '\'' +
-                ", recipe'" + recipe + '\'';
+        return title.toUpperCase() +
+                " - состав (" + recipe + ')';
     }
 }

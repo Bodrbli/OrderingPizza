@@ -10,7 +10,8 @@ public class Client {
     private String email;
     private String address;
 
-    public Client(String name, String phone, String email, String address) {
+    public Client(String id, String name, String phone, String email, String address) {
+        this.id = id;
         this.name = name;
         this.phone = phone;
         this.email = email;

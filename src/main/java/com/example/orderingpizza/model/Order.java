@@ -1,7 +1,9 @@
 package com.example.orderingpizza.model;
 
+import javax.servlet.http.HttpServletRequest;
+
 public class Order {
-    private String Id;
+    private String phone;
     private String clientId;
     private String pizzaId;
     private String toppingId;
@@ -12,8 +14,8 @@ public class Order {
         this.toppingId = toppingId;
     }
 
-    public String getId() {
-        return Id;
+    public String getPhone() {
+        return phone;
     }
 
     public String getClientId() {

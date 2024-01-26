@@ -1,5 +1,6 @@
 <%@ page import="com.example.orderingpizza.model.Pizza" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.orderingpizza.model.Ingredient" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,7 +12,7 @@
   <div class="modal">
     <form class="form" method="post" action="${pageContext.request.contextPath}/authorization">
       <%List<Pizza> pizzas = (List<Pizza>) request.getAttribute("allPizzas");%>
-      <%List<String> toppings = (List<String>) request.getAttribute("allToppings");%>
+      <%List<Ingredient> toppings = (List<Ingredient>) request.getAttribute("allToppings");%>
 
       <h3>Выберите пиццу</h3>
       <select class="requestInput" name="pizza">
@@ -22,8 +23,12 @@
 
       <h3>Выберите топпинг</h3>
       <select class="requestInput" name="topping">
-        <%for (String topping : toppings) {%>
-        <option><%=topping%></option>
+        <%for (Ingredient topping : toppings) {%>
+          <%if(topping.getId().equals("0")) {%>
+            <option value="<%=topping.getId()%>" selected><%=topping%></option>
+          <%} else {%>
+            <option value="<%=topping.getId()%>"><%=topping%></option>
+          <%}%>
         <%}%>
       </select>
 
@@ -39,6 +44,11 @@
       <input class="inputSubmit" type="submit" value="sign up">
     </form>
   </div>
+</div>
+
+<div class="map">
+  <b>Наша пиццерия на карте</b>
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeb5b0b64e9f21b66fad2d58d439e58b2bfb5b12262371f6802a283d8b6af637b&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 </div>
 </body>
 </html>

@@ -10,18 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e072fd5-afbf-4ac2-b530-a79f43e15b72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/task1/pizzaSelection.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/db/task1_2_4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/db/task3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/db/task5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Ingredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/servlets/PizzaConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/task3/constructor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/db/DBDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/db/DBDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/db/task1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/model/Pizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/servlets/CheckClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/orderingpizza/servlets/CheckClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/task1/authorization.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/task1/authorization.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/task1/pizzaSelection.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Class" />
         <option value="Jsp File" />
         <option value="Interface" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -75,6 +78,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\5000\IdeaProjects\OrderingPizza\src\main\webapp\templates\task3" />
+      <recent name="C:\Users\5000\IdeaProjects\OrderingPizza\src\main\webapp\templates" />
       <recent name="C:\Users\5000\IdeaProjects\OrderingPizza\src\main\webapp\styles" />
       <recent name="C:\Users\5000\IdeaProjects\OrderingPizza\src\main\webapp\templates\task1" />
       <recent name="C:\Users\5000\IdeaProjects\OrderingPizza\src\main\webapp" />
@@ -134,11 +139,28 @@
       <workItem from="1706102245112" duration="4600000" />
       <workItem from="1706113012667" duration="4000" />
       <workItem from="1706121868065" duration="1990000" />
-      <workItem from="1706180172007" duration="526000" />
+      <workItem from="1706180172007" duration="562000" />
+      <workItem from="1706247476379" duration="752000" />
+      <workItem from="1706254676439" duration="10179000" />
+      <workItem from="1706272963924" duration="4692000" />
+      <workItem from="1706287674778" duration="13854000" />
     </task>
+    <task id="LOCAL-00001" summary="add Order entity">
+      <option name="closed" value="true" />
+      <created>1706180717788</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706180717788</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add Order entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Order entity" />
   </component>
 </project>

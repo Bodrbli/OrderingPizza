@@ -1,11 +1,7 @@
 package com.example.orderingpizza.servlets;
 
 import com.example.orderingpizza.db.DBDao;
-import com.example.orderingpizza.model.Client;
-import com.example.orderingpizza.model.Order;
-
-import java.io.*;
-import java.sql.SQLException;
+import com.example.orderingpizza.model.Pizza;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,15 +9,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.SQLException;
 
-@WebServlet("/authorization")
-public class CheckClient extends HttpServlet {
+@WebServlet("/constructor")
+public class PizzaConstructor extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         completeRequest(request);
         RequestDispatcher dispatcher =
-                request.getServletContext().getRequestDispatcher("/templates/task1/authorization.jsp");
+                request.getServletContext().getRequestDispatcher("/templates/task3/constructor.jsp");
         dispatcher.forward(request,response);
     }
     private void completeRequest(HttpServletRequest request) {
@@ -32,20 +30,17 @@ public class CheckClient extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
+        req.setCharacterEncoding("utf-8");
         DBDao dao = new DBDao();
-        Client clientToAdd = new Client(req);
+        Pizza pizzaToAdd = dao.createClientPizza(req);
+        System.out.println(pizzaToAdd);
         try {
-            dao.add(clientToAdd);
-            Order orderToAdd = dao.getOrderValues(req.getParameter("pizza"), req.getParameter("phone"), req.getParameter("topping"));
-            dao.addDataToOrderTable(orderToAdd.getClientId(), orderToAdd.getPizzaId(), orderToAdd.getToppingId());
+            dao.addPizzaToPizzaTable(pizzaToAdd);
             dao.closeConnection();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public void destroy() {
     }
 }
